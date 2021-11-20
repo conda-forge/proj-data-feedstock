@@ -9,6 +9,7 @@ source:
   sha256: e4cd928a83567cffe2e8f2010d7343ff5d1ea443eb06456966dd12d187f3dd1b
   folder: data
 
+
 build:
   number: 0
   noarch: generic
@@ -29,7 +30,7 @@ about:
   license_family: OTHER
   # Each data source has a *README.txt file with the license info, that is
   # copied with the datum files. The following CSV file is a summary.
-  license_file: copyright_and_licenses.csv
+  license_file: data/copyright_and_licenses.csv
   summary: Data for Cartographic Projections and Coordinate Transformations Library
 
 extra:
