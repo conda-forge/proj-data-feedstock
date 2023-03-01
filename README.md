@@ -1,11 +1,11 @@
-About proj-data
-===============
+About proj-data-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/proj-data-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/OSGeo/proj-data
 
 Package license: Public domain | X/MIT | BSD-2/3/4-Clause | CC0 | CC-BY (v3.0 or later) | CC-BY-SA (v3.0 or later)
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/proj-data-feedstock/blob/main/LICENSE.txt)
 
 Summary: Data for Cartographic Projections and Coordinate Transformations Library
 
