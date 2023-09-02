@@ -32,6 +32,8 @@ about:
   # copied with the datum files. The following CSV file is a summary.
   license_file: data/copyright_and_licenses.csv
   summary: Data for Cartographic Projections and Coordinate Transformations Library
+  dev_url: https://github.com/OSGeo/proj-data
+  doc_url: https://github.com/OSGeo/PROJ-data/blob/master/README.DATA
 
 extra:
   recipe-maintainers:
