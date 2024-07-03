@@ -11,7 +11,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   noarch: generic
 
 requirements:
@@ -20,7 +20,8 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/share/proj/ca_nrc_ntv1_can.tif
+    - test -f $PREFIX/share/proj/ca_nrc_ntv1_can.tif  # [unix]
+    - if not exist %LIBRARY_PREFIX%\\share\\proj\\ca_nrc_ntv1_can.tif exit 1  # [win]
     - echo -111 50 | cs2cs +proj=latlong +ellps=clrk66 +nadgrids=ca_nrc_ntv1_can.tif +to +proj=latlong +ellps=GRS80 +datum=NAD83
     - echo -105 40 | cs2cs +init=epsg:4326 +to +init=epsg:2975
 
