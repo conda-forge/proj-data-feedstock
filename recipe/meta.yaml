@@ -11,10 +11,15 @@ source:
 
 
 build:
+  noarch: generic
+  string: unix_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [unix]
+  string: win_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}   # [win]
   number: 1
 
 requirements:
   run:
+    - __unix                          # [unix]
+    - __win                           # [win]
     - proj >=7.0.0
 
 test:
