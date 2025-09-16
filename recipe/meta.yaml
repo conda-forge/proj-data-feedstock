@@ -1,4 +1,4 @@
-{% set version = "1.22" %}
+{% set version = "1.23" %}
 
 package:
   name: proj-data
@@ -6,7 +6,7 @@ package:
 
 source:
   url: http://download.osgeo.org/proj/proj-data-{{ version }}.tar.gz
-  sha256: 4fe417fbef77fef7b2d4f305c348e5b8612209312880b54a5626a17c00966766
+  sha256: 1055630cac3d830b794b48af3ca8c9dd88f4d46ef5dc51c270e0a416b3d1fa1c
   folder: data
 
 
