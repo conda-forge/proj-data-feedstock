@@ -17,10 +17,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9229&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/proj-data-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/proj-data-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/proj-data-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -43,31 +44,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `proj-data` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install proj-data
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install proj-data
 ```
 
-It is possible to list all of the versions of `proj-data` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add proj-data
+# for installing globally
+pixi global install proj-data
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `proj-data` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search proj-data --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search proj-data --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search proj-data --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -79,6 +122,8 @@ mamba repoquery whoneeds proj-data --channel conda-forge
 # List dependencies of `proj-data`:
 mamba repoquery depends proj-data --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -148,10 +193,8 @@ Feedstock Maintainers
 =====================
 
 * [@hobu](https://github.com/hobu/)
+* [@mwtoews](https://github.com/mwtoews/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@snowman2](https://github.com/snowman2/)
 * [@xylar](https://github.com/xylar/)
-
-
-<!-- dummy commit to enable rerendering -->
 
