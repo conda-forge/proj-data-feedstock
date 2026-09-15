@@ -2,7 +2,7 @@
 
 package:
   name: proj-data
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: http://download.osgeo.org/proj/proj-data-{{ version }}.tar.gz
