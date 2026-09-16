@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/proj-data-feeds
 
 Home: https://github.com/OSGeo/proj-data
 
-Package license: Public domain | X/MIT | BSD-2/3/4-Clause | CC0 | CC-BY (v3.0 or later) | CC-BY-SA (v3.0 or later)
+Package license: CC0-1.0 OR CC-BY-4.0 OR CC-BY-SA-4.0 OR BSD-2-Clause OR etalab-2.0 OR OGL-Canada-2.0 OR DL-DE-BY-2.0
 
 Summary: Data for Cartographic Projections and Coordinate Transformations Library
 
@@ -197,7 +197,4 @@ Feedstock Maintainers
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@snowman2](https://github.com/snowman2/)
 * [@xylar](https://github.com/xylar/)
-
-
-<!-- dummy commit to enable rerendering -->
 

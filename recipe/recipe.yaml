@@ -1,0 +1,52 @@
+schema_version: 1
+
+context:
+  version: "1.25"
+
+package:
+  name: proj-data
+  version: ${{ version }}
+
+source:
+  url: http://download.osgeo.org/proj/proj-data-${{ version }}.tar.gz
+  sha256: 16d65cb5d25b7d8492dbde4d39cafcc8c42f3e55e6715bac4d87519d6d08f4c8
+  target_directory: data
+
+build:
+  number: 1
+  noarch: generic
+
+requirements:
+  run:
+    - if: unix
+      then: __unix
+    - if: win
+      then: __win
+    - proj >=7.0.0
+
+tests:
+  - script:
+      - if: unix
+        then: test -f $PREFIX/share/proj/ca_nrc_ntv1_can.tif
+      - if: win
+        then: if not exist %LIBRARY_PREFIX%\\share\\proj\\ca_nrc_ntv1_can.tif exit 1
+      - echo -111 50 | cs2cs +proj=latlong +ellps=clrk66 +nadgrids=ca_nrc_ntv1_can.tif +to +proj=latlong +ellps=GRS80 +datum=NAD83
+      - echo -105 40 | cs2cs +init=epsg:4326 +to +init=epsg:2975
+
+about:
+  license: CC0-1.0 OR CC-BY-4.0 OR CC-BY-SA-4.0 OR BSD-2-Clause OR etalab-2.0 OR OGL-Canada-2.0 OR DL-DE-BY-2.0
+  # Each data source has a *README.txt file with the license info, that is
+  # copied with the datum files. The following CSV file is a summary.
+  license_file: data/copyright_and_licenses.csv
+  summary: Data for Cartographic Projections and Coordinate Transformations Library
+  homepage: https://github.com/OSGeo/proj-data
+  repository: https://github.com/OSGeo/proj-data
+  documentation: https://github.com/OSGeo/PROJ-data/blob/master/README.DATA
+
+extra:
+  recipe-maintainers:
+    - mwtoews
+    - hobu
+    - ocefpaf
+    - snowman2
+    - xylar

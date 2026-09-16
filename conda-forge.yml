@@ -8,3 +8,4 @@ conda_build:
 noarch_platforms:
   - linux_64
   - win_64
+conda_build_tool: rattler-build
