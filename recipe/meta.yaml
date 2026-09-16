@@ -1,12 +1,12 @@
-{% set version = "1.24" %}
+{% set version = "1.25" %}
 
 package:
   name: proj-data
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: http://download.osgeo.org/proj/proj-data-{{ version }}.tar.gz
-  sha256: eadf412754a2a9a727d79579873fbe7dae802038d4c2a19e452a886d4eddd111
+  sha256: 16d65cb5d25b7d8492dbde4d39cafcc8c42f3e55e6715bac4d87519d6d08f4c8
   folder: data
 
 
@@ -29,7 +29,7 @@ test:
 
 about:
   home: https://github.com/OSGeo/proj-data
-  license: Public domain | X/MIT | BSD-2/3/4-Clause | CC0 | CC-BY (v3.0 or later) | CC-BY-SA (v3.0 or later)
+  license: CC0-1.0 OR CC-BY-4.0 OR CC-BY-SA-4.0 OR BSD-2-Clause OR etalab-2.0 OR OGL-Canada-2.0 OR DL-DE-BY-2.0
   license_family: OTHER
   # Each data source has a *README.txt file with the license info, that is
   # copied with the datum files. The following CSV file is a summary.
